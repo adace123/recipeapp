@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
+
+.details {
+    margin: 2% auto;
+    max-width: 40%;
+    background: rgb(38,50,56);
+    padding: 1%;
+    color: white;
+    font-size: 16px;
+}
+
+.add-field-form {
+    max-height: 30%;
+    text-align: center;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25% auto;
+    align-items: center;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.add-field-form * {
+    margin: 10px 20px;
+}
+
+.details input {
+    max-width: 50%;
+}
+
+.details img {
+    max-height: 60vh;
+    width: 100%;
+}
+
+.details hr {
+    width: 50%;
+}
+
+.recipe-title {
+    font-family: Comfortaa;
+}
+
+.details small {
+    margin: 0 auto;
+}
+
+.recipe-title, .recipe-time {
+    text-align: center !important;
+}
+
+.recipe-user {
+    font-weight: bold;
+}
+
+.details ul li, .details ol li {
+    margin-bottom: 10px;
+}
+
+.ingredients li {
+    list-style-type: disc;
+}
+
+.details-buttons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.instructions {
+    padding: 0 5px 0 0;
+}
+
+.btn {
+    padding: 10px;
+    margin: 0;
+}
+
+#deleteButton h3 {
+    color: red;
+}
+
+#deleteButton h3:hover {
+    background: #ffcdd2;
+}
+
+
+.fa {
+    margin: 0 .5rem;
+    /*padding: 3px;*/
+}
+
+.ingredients li span {
+    padding-right: 5px;
+}
+
+.editor input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid green;
+    font-size: 22px;
+    border-radius: 0;
+    color: white;
+}
+
+.fa-pencil:hover, .fa-check:hover {
+    color: green;
+}
+
+.fa-times:hover, .fa-trash:hover { 
+    color: red;
+}
+
+.btn h3 {
+    margin: 0 auto;
+    border-radius: 5px;
+    color: black;
+    background: white;
+    transition: all .3s ease;
+    padding: 12px 30px;
+}
+
+.btn h3:hover {
+    background: #546e7a;
+    color: white;
+}
+
+@media(max-width: 1500px) {
+    .details {
+        font-size: 16px;
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 1100px) and (min-width: 900px) {
+    .details {
+        max-width: 70%;
+        font-size: 20px;
+        padding: 2%;
+    }
+    
+    .details img {
+        max-width: 70vw;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .details {
+        max-width: 92%;
+        padding: 2%;
+        font-size: 16px;
+    }
+    
+    .details img {
+        max-width: 95vw;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .details-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,150 @@
+.recipe {
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(195,195,199,1);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(195,195,199,1);
+    box-shadow: 7px 7px 5px 0px rgba(195,195,199,1);
+    position: relative;
+    height: 100%;
+}
+
+.recipe img {
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.ratings-count {
+    display: block;
+    text-align: center;
+}
+
+.average-rating {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.recipe-info > * {
+    padding-left: 10px;
+    max-height: 0;
+    transition: max-height .2s ease;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    color: white;
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(30, 50 ,56, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .5s ease;
+    opacity: 0;
+}
+
+.rating {
+    z-index: 0;
+}
+
+.recipe:hover .overlay {
+    opacity: 1;
+}
+
+.showInfo {
+    max-height: 5000px;
+    transition: max-height 1s ease;
+}
+
+li {
+    list-style-type: disc;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+.details-link {
+    margin: 5% auto;
+}
+
+.mobile-recipe {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: rgb(30, 50 ,56);
+    font-size: 1.2em;
+    justify-content: space-between;
+    padding: 10px auto;
+    cursor: normal;
+    overflow-wrap: break-word;
+    color: white;
+    padding: .8em;
+    height: 400px;
+    
+}
+
+@media(max-width: 1500px) {
+    .overlay {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 1366px) {
+    .mobile-recipe {
+        font-size: 1.5em;
+    }
+    .overlay {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .details-link {
+        margin: 1em auto 2em auto;
+    }
+    .recipe img {
+        height: 450px;
+    }
+}
+
+@media(max-width: 800px) {
+    .recipe {
+        margin: 0 auto;
+        width: 75%;
+    }
+    .mobile-recipe {
+        height: auto;
+    }
+}
+
+@media(max-width: 650px) {
+    .recipe {
+        width: 85%;
+    }
+    .average-rating {
+        display: block;
+        margin: 8px auto;
+    }
+    .rating {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 550px) {
+    .recipe {
+        width: 95%;
+    }
+}
+
+@media(max-width: 320px) {
+    .average-rating {
+        display: block;
+    }
+}

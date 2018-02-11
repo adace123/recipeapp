@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "casual": "^1.5.17",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1",
+    "nodemon": "^1.14.12",
+    "passport": "^0.4.0",
+    "passport-facebook-token": "^3.3.0",
+    "passport-jwt": "^3.0.1",
+    "pg": "^7.4.0",
+    "sequelize": "^4.22.11",
+    "serve-favicon": "~2.4.5",
+    "shortid": "^2.2.8",
+    "uuid": "^3.1.0"
+  },
+  "scripts": {
+    "build": "babel . --ignore node_modules,build --out-dir build",
+    "start": "nodemon -r babel-register app.js --ignore client",
+    "start:prod": "node build/app.js"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0"
+  }
+}
