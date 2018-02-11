@@ -7,7 +7,7 @@ import local from './routes/auth/local';
 import social from './routes/auth/social';
 import seeds from './db/seeds';
 
-// seeds();
+seeds();
 const staticFiles = express.static(path.join(__dirname, '../../client/build'));
 
 const app = express();
