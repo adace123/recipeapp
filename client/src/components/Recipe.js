@@ -36,12 +36,10 @@ export default class Recipe extends Component {
         this.setState({userRating: rating});
         const {average, count} = await this.recipeStore.updateOrCreateRating(rating, this.props.recipeid, this.userStore.getCurrentUser().userid);
         await this.setState({average, numRatings: count});
-        
     }
     
     truncateTitle(title) {
         return title.substring(0, 45) + "...";
-        
     }
     
     onEnter() {
@@ -64,7 +62,7 @@ export default class Recipe extends Component {
                 <img src={this.props.imageURL} alt="recipe" />
                 <div className={this.modalStore.windowWidth < 1100 ? 'mobile-recipe' : 'overlay'}
                 style={this.modalStore.modalIsOpen ? {display: 'none'} : {display: 'flex'}}>
-                    <h3>{this.props.title.length >= 45 ? this.truncateTitle(this.props.title) : this.props.title}</h3>
+                    <h3>{this.props.title.length >= 40 ? this.truncateTitle(this.props.title) : this.props.title}</h3>
                     <Rating 
                         className="rating"
                         empty="fa fa-star-o fa-2x"
